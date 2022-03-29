@@ -1,0 +1,169 @@
+:root{
+    --main-radius: 5px;
+    --main-padding: 5px;
+}
+
+body {
+    margin: 0;
+}
+
+.container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 0.2fr 1.5fr 1.2fr .8fr;
+    grid-gap: 0.2rem;
+    grid-template-areas: 
+    "nav nav nav nav"
+    "sidebar main main main"
+    "sidebar content1 content2 content3"
+    "sidebar footer footer footer";
+    font-family: 'Fredericka the Great', cursive;
+    font-weight: 200;
+    text-align: center;
+    background-image: url("https://img.freepik.com/free-photo/old-black-background-grunge-texture-dark-wallpaper-blackboard-chalkboard-room-wall_1258-28312.jpg?w=900&t=st=1647657538~exp=1647658138~hmac=c0e7a7723126f27ed15c043347057c3d6752917657a5cda696d44f6b3694501a");
+}
+/* nav section */
+nav {
+    background-color: transparent;
+    color: whitesmoke;
+    grid-area: nav;
+    border-radius:var(--main-radius);
+    padding-top: var(--main-padding);
+    display: inline;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    color: whitesmoke;
+    display: none;
+}
+
+li {
+    padding: 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+/* Main section  */
+
+main {
+    background-color: transparent;
+    color: whitesmoke;
+    grid-area: main;
+    border-radius:var(--main-radius);
+    padding-top: var(--main-padding); 
+ } 
+
+main p{
+    font-weight: 400;
+}
+
+/* sidebar section usually updated with surrent events */
+
+#sidebar {
+    background-color: transparent;
+    color: whitesmoke;
+    grid-area: sidebar;
+    border-radius:var(--main-radius);
+    padding-top: var(--main-padding);
+}
+
+/*content section*/
+
+#content1 {
+    background-color: transparent;
+    color: whitesmoke;
+    grid-area: content1;
+    border-radius:var(--main-radius);
+    padding-top: var(--main-padding);
+    align-items: center;
+}
+
+#content2 {
+    background-color: transparent;
+    color: whitesmoke;
+    grid-area: content2;
+    border-radius:var(--main-radius);
+    padding-top: var(--main-padding);
+    align-items: center;
+}
+
+#content3 {
+    background-color: transparent;
+    color: whitesmoke;
+    grid-area: content3;
+    border-radius:var(--main-radius);
+    padding-top: var(--main-padding);
+    align-items: center;
+}
+
+img {
+    max-width: 300px;
+}
+
+footer {
+    background-color: transparent;
+    color: whitesmoke;
+    grid-area: footer;
+    border-radius:var(--main-radius);
+    padding-top: var(--main-padding);
+    display: flex;
+    justify-content: space-around;
+    font-weight: 400;
+}
+h2 {
+    font-weight: 400;
+}
+
+h4 {
+    font-weight: 400;
+}
+
+h6 {
+    font-weight: 300;
+}
+
+@media only screen and (max-width: 550px) {
+    body {
+        background-image: url("https://img.freepik.com/free-photo/old-black-background-grunge-texture-dark-wallpaper-blackboard-chalkboard-room-wall_1258-28312.jpg?w=900&t=st=1647657538~exp=1647658138~hmac=c0e7a7723126f27ed15c043347057c3d6752917657a5cda696d44f6b3694501a");
+        
+    }
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.4fr 0.4fr 2.2fr 1.2fr 1.2fr 1.2fr 1fr;
+        grid-template-areas: 
+        "nav"
+        "content1"
+        "main"
+        "content2"
+        "sidebar"
+        "content3"
+        "footer";
+        color: whitesmoke;
+        background-color: transparent;
+    }
+    ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+        color: whitesmoke;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+
+    p {
+        padding: 1rem;
+    }
+}
